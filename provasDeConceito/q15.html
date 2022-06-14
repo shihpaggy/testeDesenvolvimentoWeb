@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Questão 15</title>
+    </head>
+
+    <body class="layout">
+        <header class="containerA container">
+            <h1>A</h1>
+        </header>
+        <article class="containerB container">
+            <h2>B</h2>
+        </article>
+        <article class="containerCD">
+            <div class="container">
+                <h2>C</h2>
+            </div>
+            <div class="container">
+                <h2>D</h2>
+            </div>
+        </article>
+        <article class="containerE container">
+            <h2>E</h2>
+        </article>
+
+        <style>
+            .layout{
+                background: #f1f1f1;
+                display: grid;
+                grid-gap: 1.5em;
+                text-align: center;
+            }
+            .container{
+                background: #fff;
+                border: 1px solid;
+            }
+            .containerCD{
+                display: grid;
+                grid-gap: 1.5em;
+                grid-template-columns: auto auto;
+            }
+
+            @media screen and (min-width: 0px) {
+                .layout{
+                    grid-template-rows: 15vh 20vh 15vh 15vh;
+                }
+            }
+
+            @media screen and (min-width: 1200px) {
+                .layout{
+                    grid-template-columns: auto auto 35%;
+                    grid-template-rows: 15vh 20vh 15vh;
+                }
+                .containerA{
+                    grid-column: 1/4;
+                }
+                .containerB{
+                    grid-column: 1/3;
+                }
+                .containerCD{
+                    grid-column: 1/3;
+                    grid-gap: 1.5em;
+                }
+                .containerE{
+                    grid-column: 3/4;
+                    grid-row: 2/4;
+                }
+            }
+        </style>
+    </body>
+    </html>
+    

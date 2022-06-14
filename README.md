@@ -257,8 +257,111 @@ Em casos de ambiguidades no CSS, deve considerar a especificidade dos seletores.
 >> b) Deve possuir 2 linhas (com dados fictícios);
 >> c) E uma última linha com todas as suas colunas mescladas.
 
+```
+<table border = "1">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Gênero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Lucas</td>
+            <td>24 anos</td>
+            <td>Masculino</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>26 anos</td>
+            <td>Mascullino</td>
+        </tr>
+    </tbody>
+    <tfoot>    
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+    </tfoot>
+</table>
+```
+
 ## Questão 14
 > Utilizando grid system, não sendo necessário a responsividade, elabore uma página web que siga o layout indicado.
 
+```
+.layout{
+    background: #2895e7;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 20% auto 30%;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+}
+.containerHeader{
+    background: #d3eafc;
+    grid-column: 1/4;
+}
+.containerMenu{
+    background: #d3eafc;
+    grid-row: 2/4;
+}
+.containerMain{
+    background: #d3eafc;
+}
+.containerRight{
+    background: #d3eafc;
+}
+.conatainerFooter{
+    background: #d3eafc;
+    grid-column: 2/4;
+}
+```
+
 ## Questão 15
 > Crie uma página web conforme o layout abaixo que seja responsiva para ser utilizada nos diferentes navegadores e dispositivos.
+
+```
+.layout{
+    background: #f1f1f1;
+    display: grid;
+    grid-gap: 1.5em;
+    text-align: center;
+}
+.container{
+    background: #fff;
+    border: 1px solid;
+}
+.containerCD{
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: auto auto;
+}
+
+@media screen and (min-width: 0px) {
+    .layout{
+        grid-template-rows: 15vh 20vh 15vh 15vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .layout{
+        grid-template-columns: auto auto 35%;
+        grid-template-rows: 15vh 20vh 15vh;
+    }
+    .containerA{
+        grid-column: 1/4;
+    }
+    .containerB{
+        grid-column: 1/3;
+    }
+    .containerCD{
+        grid-column: 1/3;
+        grid-gap: 1.5em;
+    }
+    .containerE{
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+}
+```
