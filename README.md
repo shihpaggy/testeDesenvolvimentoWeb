@@ -31,7 +31,7 @@ A estrutura essencial para a construção da página em HTML é mostrado abaixo.
 </html>
 ```
 
-Afim de uma melhor preparação do conteúdo, algumas definições metas são indispensáveis no head do documento, como a biblioteca de caracteres e *viewport* da tela em que a página será carregada, além da indicação sobre a lingua em que o conteúdo mostrado apresentada. Vale ressaltar que a falta destes não afeta na construção do *site*, mas o torna melhor definido e, assim, evitar erros de apresentação.
+Afim de uma melhor preparação do conteúdo, algumas definições metas são indispensáveis no *head* do documento, como a biblioteca de caracteres e *viewport* da tela em que a página será carregada, além da indicação sobre a língua em que o conteúdo mostrado apresentada. Vale ressaltar que a falta destes não afetam na construção do *site*, mas o torna melhor definido e, assim, evitando erros de apresentação.
 
 ```
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6{
 }
 ```
 
-O trecho de codigo anterior seleciona as tags de título do HTML e os atribui. Contudo, pensando num projeto onde nem todo conteúdo dessas tags precisam destas transformações, o método da criação de classe também seria válido.
+O trecho de codigo anterior seleciona as tags de título do HTML e os atribui. Contudo, pensando num projeto onde nem todo conteúdo dessas tags precisam de transformações, o método da criação de classe também seria válido.
 
 ```
 .containerCabecalho{
@@ -71,7 +71,7 @@ O trecho de codigo anterior seleciona as tags de título do HTML e os atribui. C
 }
 ```
 
-Assim, para os cabeçalhos que precisam estar definidos com fonte Arial, devem estar em negrito e em caixa alta, basta adicionar a classe `containerCabecalho` e terá o mesmo resultado.
+Assim, para os cabeçalhos que precisam estar definidos com fonte Arial, em negrito e em caixa alta, basta adicionar a classe `containerCabecalho` e terá o mesmo resultado.
 
 ## Questão 3
 > Construa utilizando HTML e JavaScript um link que ao ser clicado, abre um alerta do navegador.
@@ -126,7 +126,7 @@ li:last-child{
 ## Questão 6
 > Um arquivo externo chamado styles.css precisa ser carregado na página HTML. Escreva o código para fazer tal carregamento.
 
-Arquivos externos de CSS deve ser incluidos no head do HTML com a seguinte configuração:
+Arquivos externos de CSS devem ser incluidos no *head* do HTML com a seguinte configuração:
 
 ```
 <link rel="stylesheet" href="styles.css">
@@ -135,7 +135,7 @@ Arquivos externos de CSS deve ser incluidos no head do HTML com a seguinte confi
 ## Questão 7
 > Um dos critérios de um determinado projeto é que todos os links devem ficar sublinhados quando o usuário passar o mouse por cima deles. Escreva o código para garantir essa regra. 
 
-Os efeitos descritos acima pode ser adicionado com o seletor `:hover`. Segue a aplicação abaixo.
+Os efeitos descritos acima podem ser adicionados com o seletor `:hover`. Segue a aplicação abaixo.
 
 ```
 a:hover {
@@ -161,7 +161,7 @@ console.log(mensagem);
 ## Questão 9
 > Usando o mesmo código da questão anterior, substitua o texto que será exibido no console do navegador para Hello Toodoo! O novo valor deve sobrescrever o valor original.
 
-Para a exibição da nova frase, deve-se atribuir um novo valor para a variável `mensagem` criada no exercício anterior. Assim, o código sobrescreve a mensagem com a nova variável.
+Para a exibição da nova frase, deve-se atribuir um novo valor para a variável `mensagem` criada no exercício anterior. Assim, o código sobrescreve a mensagem armazenada na memória.
 
 ```
 mensagem = 'Hello Toodoo!';
@@ -225,7 +225,7 @@ multiplica(3, 3);
 **(c) !important**
 (d) nenhuma das alternativas
 
-Nas hierarquias CSS, para casos de ambiguidade em que duas regras são iguais ou competem, o que usa `!important` pervalece.
+Nas hierarquias CSS, para casos de ambiguidade em que duas regras são iguais ou competem, o que usa `!important` prevalece.
 
 ## Questão 12
 > Analisando a estrutura CSS a seguir, qual cor prevalecerá no elemento HTML?
