@@ -126,14 +126,46 @@ li:last-child{
 ## Questão 6
 > Um arquivo externo chamado styles.css precisa ser carregado na página HTML. Escreva o código para fazer tal carregamento.
 
+Arquivos externos de CSS deve ser incluidos no head do HTML com a seguinte configuração:
+
+```
+<link rel="stylesheet" href="styles.css">
+```
+
 ## Questão 7
 > Um dos critérios de um determinado projeto é que todos os links devem ficar sublinhados quando o usuário passar o mouse por cima deles. Escreva o código para garantir essa regra. 
+
+Os efeitos descritos acima pode ser adicionado com o seletor `:hover`. Segue a aplicação abaixo.
+
+```
+a:hover {
+    text-decoration: underline;
+}
+```
 
 ## Questão 8
 > Escreva um comando JavaScript onde o texto Hello World! seja exibido no console do navegador através de uma variável.
 
+Para o início da atividade, é nescessário definir a frase a ser exibida como uma variável.
+
+```
+let mensagem = 'Hello World!';
+```
+
+Assim, é possível imprimir no console da página a `mensagem` desejada.
+
+```
+console.log(mensagem);
+```
+
 ## Questão 9
 > Usando o mesmo código da questão anterior, substitua o texto que será exibido no console do navegador para Hello Toodoo! O novo valor deve sobrescrever o valor original.
+
+Para a exibição da nova frase, deve-se atribuir um novo valor para a variável `mensagem` criada no exercício anterior. Assim, o código sobrescreve a mensagem com a nova variável.
+
+```
+mensagem = 'Hello Toodoo!';
+```
 
 ## Questão 10
 > Desenvolva via JavaScript a seguinte estrutura de código levando em consideração as seguintes regras:
@@ -141,14 +173,44 @@ li:last-child{
 >> b) Se o seu valor for igual a chocolate, deve ser exibido no alerta do navegador a mensagem: Amo sorvete de chocolate;
 >> c) Se o seu valor for outro, deve exibir a mensagem: Prefiro outros sabores.
 
+Para resolução deste exercício, deve-se criar a variável `sorveteDeChocolate`.
+
+```
+let sorveteDeChocolate;
+```
+
+Assim, é possível montar a estrutura de verificação com base nas regras fornecidas:
+
+```
+if(sorveteDeChocolate == 'chocolate'){
+    alert('Amo sorvete de chocolate');
+}else{
+    alert('Prefiro outros sabores');
+}
+```
+
 ## Questão 11
 > Na função JavaScript a seguir, responda quais serão os resultados respectivos:
 
-```
+ ```
 function multiplicacao (num1,num2) {
     let resultado = num1 * num2;
     return resultado;
 }
+
+multiplica(4, 7);
+multiplica(5, 6);
+multiplica(3, 3);
+```
+
+Quando executado o código acima, não será obtido nenhum valor. O nome da função apresentada é `multiplicacao`, contudo, quando chama a função cujo nome `multiplica` dará um erro de referência. Para corrigir o erro é simples, basta trocar o nome da função para multiplica e executar novamente o código e dará resultados de: 28, 30 e 9.
+
+```
+function multiplica (num1,num2) {
+   let resultado = num1 * num2;
+    console.log(resultado);
+    return resultado;
+    }
 
 multiplica(4, 7);
 multiplica(5, 6);
@@ -160,8 +222,10 @@ multiplica(3, 3);
 
 (a) force
 (b) strong
-(c) !important
+**(c) !important**
 (d) nenhuma das alternativas
+
+Nas hierarquias CSS, para casos de ambiguidade em que duas regras são iguais ou competem, o que usa `!important` pervalece.
 
 ## Questão 12
 > Analisando a estrutura CSS a seguir, qual cor prevalecerá no elemento HTML?
@@ -180,10 +244,12 @@ ul li {
     color: black;
 }
 ```
-(a) red
+**(a) red**
 (b) blue
 (c) green
 (d) black
+
+Em casos de ambiguidades no CSS, deve considerar a especificidade dos seletores. Neste caso, o seletor `li.list-item` é o mais específico, portanto, o elemento aparece na cor vermelha.
 
 ## Questão 13
 > Levando em consideração a semântica de código, escreva o HTML de uma tabela que possui as seguintes características:
